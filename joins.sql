@@ -1,0 +1,17 @@
+create table customer(cid int primary key,cname varchar(20));
+ desc customer;
+  insert into customer values(1,"anil");
+    insert into customer values(2,"raju");
+    insert into customer values(3,"ravi");
+    insert into customer values(4,"ramu");
+     insert into customer values(5,"harsha");
+     select *from customer;
+create  table orders(order_id int primary key,amount decimal(30,2),customers int);
+desc orders;
+insert into orders values(1,10000.00,20);
+ insert into orders values(2,220000.00,3);
+ insert into orders values(3,560000.00,7);
+ insert into orders values(4,660000.00,4);
+ insert into orders values(5,750000.00,2);
+ select *from orders;
+  select customer.cid,customer.cname,orders.amount from customer inner join orders on customer.cid=orders.customers;
